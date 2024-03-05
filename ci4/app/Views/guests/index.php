@@ -7,7 +7,7 @@
         <h3><?= esc($guests_item['name']) ?></h3>
 
         <div class="main">
-            <?= esc($guests_item['name']) ?>
+            <?= esc($guests_item['email']) ?>
         </div>
         <p><a href="./guests/<?= esc($guests_item['name'], 'url') ?>">View article</a></p>
 

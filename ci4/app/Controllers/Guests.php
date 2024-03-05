@@ -50,12 +50,15 @@ class Guests extends BaseController
     {
         helper('form');
 
-        $data = $this->request->getPost(['name', 'body']);
+        $data = $this->request->getPost(['name', 'email', 'website', 'comment']);
 
         // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($data, [
             'name' => 'required|max_length[255]|min_length[3]',
             'email'  => 'required|max_length[5000]|min_length[10]',
+            'website'  => 'required|max_length[5000]|min_length[10]',
+            'comment'  => 'required|max_length[5000]|min_length[10]',
+            // 'gender'  => 'required|max_length[5000]|min_length[10]',
         ])) {
             // The validation fails, so returns the form.
             return $this->new();
@@ -71,7 +74,7 @@ class Guests extends BaseController
             'email'  => $post['email'],
             'website'  => $post['website'],
             'comment'  => $post['comment'],
-            'gender'  => $post['gender'],
+            // 'gender'  => $post['gender'],
         ]);
 
         return view('templates/header', ['name' => 'Create a guests item'])
