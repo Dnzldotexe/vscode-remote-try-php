@@ -204,7 +204,7 @@
         <div>
             <h1>Shill me some</h1>
             <!-- Pseudo Form  -->
-            <a id="link-hover" href="forms.php" target="_blank">My Pseudo Eval Form</a>
+            <a id="link-hover" href="/lab3/ci4/public/forms" target="_blank">My Pseudo Eval Form</a>
         </div>
     </div>
     <div class="container-1">
